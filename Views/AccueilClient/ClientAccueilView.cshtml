@@ -1,0 +1,21 @@
+@model BanqueNET.Models.Client
+
+<div class="container" id="main">
+
+    <div class="alert alert-secondary" role="alert">
+        <h3>Bonjour @Model.Prenom @Model.Nom</h3>
+    </div>
+
+    <div class="row">
+        <p>Vos coordonnées : </p> 
+    </div>
+    <div class="row">
+        <p>@Model.Adresse</p>
+        <p>@Model.Codepostal - @Model.Ville</p>
+    </div>
+    <div class="row">
+        <p>
+            <strong>Veuillez contacter votre conseiller en cas de changement.</strong>
+        </p>
+    </div>
+</div>

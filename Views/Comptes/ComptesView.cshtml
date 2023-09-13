@@ -1,0 +1,26 @@
+@model IEnumerable<Compte>
+
+<div class="container" id="main">
+
+    <div class="alert alert-secondary" role="alert">
+        <h3>Résumé de votre situation</h3>
+    </div>
+    
+    <table class="table">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Numéro de compte</th>
+                <th scope="col">Solde (en €)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Compte compte in @Model) 
+            { 
+                <tr>
+                    <td>@compte.Numero</td>
+                    <td>@compte.Solde €</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

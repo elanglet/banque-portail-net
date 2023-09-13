@@ -1,0 +1,46 @@
+@model VirementModel
+
+<div class="container" id="main">
+
+    <div class="alert alert-secondary" role="alert">
+        <h3>Virement entre vos comptes</h3>
+    </div>
+    <div>
+        <form asp-controller="Virement" asp-action="TraiterLeVirement" method="post">
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th scope="col">Numéro de compte</th>
+                        <th scope="col">Solde (en €)</th>
+                        <th scope="col">A Débiter</th>
+                        <th scope="col">A Créditer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        foreach(Compte compte in @Model.Comptes)
+                        { 
+                            <tr>
+                                <td>@compte.Numero</td>
+                                <td>@compte.Solde €</td>
+                                <td>
+                                    <input type="radio" asp-for="NumeroCompteADebiter" value="@compte.Numero" />
+                                </td>
+                                <td>
+                                    <input type="radio" asp-for="NumeroCompteACrediter" value="@compte.Numero" />
+                                </td>
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+            <div>
+                <label>Montant : </label>
+                <input type="text" asp-for="Montant" value="" />
+            </div>
+            <div>
+                <input type="submit" name="Valider" />
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,32 @@
+@model AuthentificationModel
+
+<div class="container" id="main">
+
+    <div class="alert alert-secondary" role="alert">
+        <h3>Authentification Client</h3>
+    </div>
+        @{
+            if(@Model.Error)
+            {
+                <div class="alert alert-danger" role="alert">
+                    Erreur d'authentification !!!
+                </div>
+            }
+        }
+    <div>
+        <form asp-controller="Authentification" 
+            asp-action="Authentifier" method="post">
+            <div>
+                <label>Identifiant : </label>
+                <input type="text" asp-for="Identifiant" value="" />
+            </div>
+            <div>
+                <label>Mot De Passe : </label>
+                <input type="password" asp-for="MotDePasse" value="" />
+            </div>
+            <div>
+                <input type="submit" name="Valider" />
+            </div>
+        </form>
+    </div>
+</div>
