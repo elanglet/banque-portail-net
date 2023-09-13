@@ -1,0 +1,15 @@
+services:
+    banque-server:
+        image: banque-server:dev
+        build: .
+        container_name: banque-server
+        ports: 
+            - 80:80
+    mariadb-server:
+        image: mariadb-server:dev
+        build: ./db
+        ports:
+          - 3306:3306
+        environment:
+            - MARIADB_RANDOM_ROOT_PASSWORD=yes
+        container_name: mariadb-server
