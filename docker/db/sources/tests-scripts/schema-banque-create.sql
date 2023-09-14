@@ -2,6 +2,8 @@
 -- Structure de la table `client`
 --
 
+USE `banque`
+
 CREATE TABLE IF NOT EXISTS `client` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nom` varchar(100) DEFAULT NULL,

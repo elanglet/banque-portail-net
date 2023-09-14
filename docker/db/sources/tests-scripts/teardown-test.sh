@@ -1,3 +1,3 @@
 #! /bin/bash
 
-mysql -ubanque -pbanque < /tests/scripts/schema-banque-drop.sql
+mysql -ubanque -pbanque < /tests-scripts/schema-banque-drop.sql
