@@ -5,8 +5,8 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <StartupObject>BanqueNET.Program</StartupObject>
+    <OutputDirectory>docker\app</OutputDirectory>
     <InvariantGlobalization>true</InvariantGlobalization>
-    <IsPackable>true</IsPackable>
   </PropertyGroup>
 
   <ItemGroup>
